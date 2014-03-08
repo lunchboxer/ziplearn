@@ -9,8 +9,8 @@ Since its serving a REST api the data backend can be replaced with anything else
 ## Process ##
 Currently the app has no implemented functionality. The path to 0.9 (working, if buggy, implementation of basic features) is as folows:
 
-- [*] properly outline the intended functionality of the app
-- [*] set up all models
+- [x] properly outline the intended functionality of the app
+- [x] set up all models
 - [ ] set up api for models
 - [ ] build front-end with ember, no data
 - [ ] integrate data

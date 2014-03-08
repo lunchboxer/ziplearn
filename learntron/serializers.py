@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
+from learntron.models import Lesson, Slide
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -12,3 +13,13 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
         fields = ('url', 'name')
+
+
+class LessonSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Lesson
+
+
+class SlideSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Slide

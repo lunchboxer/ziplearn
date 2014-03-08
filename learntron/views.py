@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from learntron.serializers import UserSerializer, GroupSerializer
+from learntron.serializers import (UserSerializer, GroupSerializer,
+                                   LessonSerializer, SlideSerializer)
+from learntron.models import Lesson, Slide
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -17,3 +19,19 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
+
+class LessonViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows lessons to be viewed or edited.
+    """
+    queryset = Lesson.objects.all()
+    serializer_class = LessonSerializer
+
+
+class SlideViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows slides to be viewed or edited.
+    """
+    queryset = Slide.objects.all()
+    serializer_class = SlideSerializer
