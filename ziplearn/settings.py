@@ -41,6 +41,7 @@ THIRD_PARTY_APPS = (
 )
 
 LOCAL_APPS = (
+    'learntron',
 )
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -58,6 +59,19 @@ ROOT_URLCONF = 'ziplearn.urls'
 
 WSGI_APPLICATION = 'ziplearn.wsgi.application'
 
+REST_FRAMEWORK = {
+    # Use hyperlinked styles by default.
+    # Only used if the `serializer_class` attribute is not set on a view.
+    'DEFAULT_MODEL_SERIALIZER_CLASS':
+    'rest_framework.serializers.HyperlinkedModelSerializer',
+
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissions'
+    ],
+    'PAGINATE_BY': 20
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
