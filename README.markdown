@@ -8,19 +8,20 @@ Since its serving a REST api the data backend can be replaced with anything else
 
 ## Process ##
 Currently the app has no implemented functionality. The path to 0.9 (working, if buggy, implementation of basic features) is as folows:
-    * properly outline the intended functionality of the app
-    * set up all models
-    * set up api for models
-    * build front-end with ember, no data
-    * integrate data
-    * implement websocket features
-    * style
-    * optimize
+
+* properly outline the intended functionality of the app
+* set up all models
+* set up api for models
+* build front-end with ember, no data
+* integrate data
+* implement websocket features
+* style
+* optimize
 
 Later there are other features already conceived which will need to be built, and there will need to be some serious testing/bug-fixing/tweaking. 
 
 ## Functionality ##
-Here's the breakdown of the app from the user's point of view. It also has three main parts but their not 100% independent of each other. The first is the **display**, which is presenting our learning content via projector or TV attached to a computer running a browser in fullscreen. At first this project was conceived to run on the raspberry pi (server and browser) to be attached behind a large flatscreen, but the minimal graphics capabilities in X and the i/o bottlenecks make such a setup impracticle. Next, is the student view which shows instant polls and various reference materials on the student's smartphone browser. Finally the "leader" view run on a mobile device and allows the one leading the class to control the display as well as presenting useful information such as a summary of instant poll responses and notes for the presentation.
+Here's the breakdown of the app from the user's point of view. It also has three main parts but their not 100% independent of each other. The first is the **display**, which is presenting our learning content via projector or TV attached to a computer running a browser in fullscreen. At first this project was conceived to run on the raspberry pi (server and browser) to be attached behind a large flatscreen, but the minimal graphics capabilities in X and the i/o bottlenecks make such a setup impracticle. Next, is the **student** view which shows instant polls and various reference materials on the student's smartphone browser. Finally the **leader** view run on a mobile device and allows the one leading the class to control the display as well as presenting useful information such as a summary of instant poll responses and notes for the presentation.
 
 This (upcoming) version will not support audio or video content, or even images.
 
