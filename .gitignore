@@ -43,6 +43,7 @@ local_settings.py
 fabfile.py
 .sass-cache
 node_modules
-/static/
+/static/components
 /notes.markdown
 *.log
+

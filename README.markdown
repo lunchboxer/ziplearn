@@ -7,7 +7,7 @@ The whole app can be divided into three working parts (from the developer's poin
 Since its serving a REST api the data backend can be replaced with anything else that serves the data in a similar format without having to make any changes to the other two parts. All three parts are loosely coupled in this way.
 
 ## Process ##
-Currently the app has no implemented functionality. The path to 0.9 (working, if buggy, implementation of basic features) is as folows:
+Currently the app has no implemented functionality. The path to 0.1.0 (working, if buggy, implementation of basic features) is as folows:
 
 * set up api for models
 * build front-end with ember, no data
