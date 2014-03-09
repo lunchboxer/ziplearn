@@ -34,3 +34,5 @@ If the user is a member of the leader group then the leader view is loaded autom
 
 ## Install ##
 Before it will run, you'll need to add a local_setting.py file to the django project in the same directory as settings.py. See local_settings.sample for how that should look.
+
+You'll also need to install the javascript libraries. If you have node.js and bower installed then simply run "bower install" in the /static directory. Otherwise have a look at the bower.json file and install the libraries in /static/components in seperate directories.
