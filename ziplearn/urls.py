@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
-from rest_framework import routers
 from learntron import views
+from rest_framework import routers
 
 from django.contrib import admin
 
@@ -10,7 +10,8 @@ router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'lessons', views.LessonViewSet)
-router.register(r'slide', views.SlideViewSet)
+router.register(r'slides', views.SlideViewSet)
+
 
 urlpatterns = patterns(
     '',

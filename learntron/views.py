@@ -7,7 +7,7 @@ from learntron.models import Lesson, Slide
 
 class UserViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    View or edut users.
     """
     queryset = User.objects.all()
     serializer_class = UserSerializer
@@ -15,7 +15,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
 class GroupViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows groups to be viewed or edited.
+    View or edit groups
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
@@ -23,7 +23,7 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 class LessonViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows lessons to be viewed or edited.
+    View or edit lessons
     """
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
@@ -31,7 +31,7 @@ class LessonViewSet(viewsets.ModelViewSet):
 
 class SlideViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows slides to be viewed or edited.
+    View or edit slides
     """
     queryset = Slide.objects.all()
     serializer_class = SlideSerializer

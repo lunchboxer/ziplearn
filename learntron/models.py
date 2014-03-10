@@ -30,7 +30,7 @@ class Note(models.Model):
 
 
 class Slide(models.Model):
-    lesson = models.ForeignKey(Lesson)
+    lesson = models.ForeignKey(Lesson, related_name='slides')
     content = models.TextField()
 
     def __unicode__(self):

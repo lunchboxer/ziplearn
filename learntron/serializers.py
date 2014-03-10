@@ -10,16 +10,22 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
+    users = UserSerializer(many=True)
+
     class Meta:
         model = Group
-        fields = ('url', 'name')
-
-
-class LessonSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Lesson
+        fields = ('url', 'name', 'users')
 
 
 class SlideSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Slide
+
+
+class LessonSerializer(serializers.HyperlinkedModelSerializer):
+    slides = SlideSerializer(many=True)
+
+    class Meta:
+        model = Lesson
+        fields = ('title', 'created_by', 'created_time', 'last_edited',
+                  'modified_by', 'slides')
