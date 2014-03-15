@@ -1,0 +1,12 @@
+{
+  "name": "ziplearn",
+  "dependencies": {
+    "ember": "~1.4",
+    "ember-data": "~1.0.0-beta.7",
+    "normalize-css": "~3.0.0",
+    "jquery": "~2.1.0"
+  },
+  "resolutions": {
+    "jquery": "~2.1.0"
+  }
+}
