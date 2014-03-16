@@ -16,6 +16,7 @@ module.exports = function(grunt) {
     // Don't bother with compression, because they're already compressed
     , uglify: { options: { preserveComments: false
                          , compress: false
+                         , report: 'gzip'
                          }
               , depends: { files: { 'static/js/dependencies.js': [ 'static/components/jquery/dist/jquery.min.js'
                                                                  , 'static/components/handlebars/handlebars.min.js'
@@ -43,6 +44,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('build', ['sass:min', 'uglify']);
+  grunt.registerTask('build', ['sass:min']);
   grunt.registerTask('default', ['build', 'watch']);
 };
