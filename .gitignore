@@ -44,7 +44,7 @@ fabfile.py
 .sass-cache
 node_modules
 /static/components
-/notes.markdown
+/notes.*
 /public/**/*
 /vendor/**/*
 *.log

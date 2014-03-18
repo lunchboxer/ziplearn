@@ -3,9 +3,6 @@
   "name": "Ziplearn",
   "description": "An interactive classroom presentation runner.",
   "version": "0.1.0",
-  "engines": {
-    "node": "~0.6.10 || 0.8 || 0.9"
-  },
   "scripts": {
     "start": "brunch watch --server",
     "build": "brunch build",
