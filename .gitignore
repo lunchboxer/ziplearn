@@ -45,5 +45,7 @@ fabfile.py
 node_modules
 /static/components
 /notes.markdown
+/public/**/*
+/vendor/**/*
 *.log
 
