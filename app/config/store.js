@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = App.Store = DS.Store.extend({
+module.exports = App.ApplicationStore = DS.Store.extend({
   revision: 13
 });

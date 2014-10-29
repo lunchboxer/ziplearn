@@ -10,9 +10,8 @@ exports.config = {
       },
       order: {
         before: [
-          'vendor/scripts/common/jquery.js',
           'vendor/scripts/common/fastclick.js',
-          'vendor/scripts/common/foundation.js',
+          'vendor/scripts/development/jquery.js',
           'vendor/scripts/common/handlebars.js',
           'vendor/scripts/development/ember.js',
           'vendor/scripts/development/ember-data.js'
@@ -54,8 +53,8 @@ exports.config = {
           //},
           //order: {
             //before: [
-              //'vendor/scripts/common/jquery.js',
               //'vendor/scripts/common/handlebars.js',
+              //'vendor/scripts/production/jquery.js',
               //'vendor/scripts/production/ember.min.js',
               //'vendor/scripts/production/ember-data.min.js'
             //]
