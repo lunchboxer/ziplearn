@@ -33,6 +33,15 @@ exports.config = {
       }
     }
   },
+  plugins: {
+    autoReload: {
+      enabled: {
+        css: 'on',
+        js: 'on',
+        assets: 'on'
+      }
+    }
+  }
   //overrides: {
 
     //// Production Settings
@@ -47,8 +56,8 @@ exports.config = {
             //before: [
               //'vendor/scripts/common/jquery.js',
               //'vendor/scripts/common/handlebars.js',
-              //'vendor/scripts/production/ember.js',
-              //'vendor/scripts/production/ember-data.js'
+              //'vendor/scripts/production/ember.min.js',
+              //'vendor/scripts/production/ember-data.min.js'
             //]
           //}
         //}

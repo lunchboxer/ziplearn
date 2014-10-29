@@ -1,4 +1,6 @@
 # ZipLearn #
+This software currently does nothing useful. It is a structure within which development will take place.
+
 It's a webapp for dynamically presenting classroom content with interactive possiblities for the students. At first it was a slideshow that I could easily control with my phone. Then I wanted to let the students use their phones to participate in instant polls which assess comprehension and give the one leading the class instant feedback. I also decided that I wanted complex interactive widgets in the presentation such as a scoreboard for games, a timer, and even a simple whiteboard. Then I thought wouldn't it also be cool if the students could use their phone for references while during the class. They could look at notes for the class, review vocad used or see example sentences. In short I wanted to use a webapp to empower the students and the one leading the class to be more involved and deliver or receive content in the most time-appropriate manner possible.
 
 The fist goal is 0.1.0, an app that does something. 
@@ -24,6 +26,6 @@ Both the student and leader will start at a landing page, which requires the use
 If the user is a member of the leader group then the leader view is loaded automatically. After connecting to the websocket server it gets the current state of the display. If a lesson is on-going then the leader loads the proper state, so that if the person leading the class is disconnected for any reason they can simply reconnect and continue the lesson from the last state the handled by the display instead of restarting the lesson and quickly skipping ahead. The main subview for the leader is a dynamic set of controls of the lesson display, dependent on the current lesson slide. The simplest would be a set of "forward" and "back" buttons. In addition the leader can view presentation notes. It's easy to imagine some more advanced options like viewing poll results in real-time to see how many of the students have responded and how. It might also be useful for the leader to edit the slides, or insert display items on the fly, such as put up a timer or pop up a whiteboard, but these are all future version features.
 
 ## Install ##
-Before it will run, you'll need to add a local_setting.py file to the django project in the same directory as settings.py. See local_settings.sample for how that should look.
+Before it will run, you'll need to add a local_setting.py file to the django project in the same directory as settings.py. See local_settings.sample for how that should look. don't forget to run 'python manage.py collectstatic' in the 'server' directory so that your webserver can find the static files for admin and api web interface
 
 You'll also need to install the javascript libraries. If you have node.js. This project uses brunch for build tools which require node/npm. Other node dependencies can be installed with "npm install" from the project root.
