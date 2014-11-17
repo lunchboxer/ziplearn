@@ -1,0 +1,175 @@
+@import "settings";
+@import "normalize";
+@import "font-awesome/font-awesome";
+@import "responsive-nav";
+@import "responsive-nav-custom";
+
+@import "foundation/components/grid";
+@import "foundation/components/forms";
+// @import "foundation/components/accordion";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/block-grid";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/button-groups";
+// @import "foundation/components/buttons";
+// @import "foundation/components/clearing";
+// @import "foundation/components/dropdown";
+// @import "foundation/components/dropdown-buttons";
+// @import "foundation/components/flex-video";
+// @import "foundation/components/icon-bar";
+// @import "foundation/components/inline-lists";
+// @import "foundation/components/joyride";
+// @import "foundation/components/keystrokes";
+// @import "foundation/components/labels";
+// @import "foundation/components/magellan";
+// @import "foundation/components/orbit";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/range-slider";
+// @import "foundation/components/reveal";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/split-buttons";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switches";
+// @import "foundation/components/tables";
+// @import "foundation/components/tabs";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+// @import "foundation/components/top-bar";
+// @import "foundation/components/type";
+// @import "foundation/components/offcanvas";
+// @import "foundation/components/visibility";
+
+
+  ////////////
+ // Mixins //
+////////////
+
+@mixin better-clearfix(){
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+  ////////////
+ // Styles //
+////////////
+
+html, body {
+  height:100%;
+}
+
+body {
+  font-family: $base-font;
+  background-color: $bgcolor1; /*top colour*/
+  background: linear-gradient(to bottom, $bgcolor1, $bgcolor2);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: $fontcolor;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 40em) {
+  div#wrapper {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+section, footer{
+  background:rgba(0,0,0,0.3);
+  padding: 1em;
+  margin-bottom: 0.2em;
+}
+
+header {
+  clear:both;
+  @include better-clearfix;
+  box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.2);
+}
+header i {
+  margin-right: 0.5em;
+}
+
+form {
+  margin-top:1em;
+}
+
+.right-align {
+  text-align:right;
+}
+
+input.small {
+  max-width:25em;
+}
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+p a {
+  color: $link-color;
+  &:hover {
+    color: yellow;
+  }
+}
+// When not logged in show a splash page with no navmenu and larger title
+// header.splash h1 {
+//   font-size: 3em;
+//   margin: 1em;
+// }
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  padding: 0.5em 1em;
+  border: 2px solid $fontcolor;
+  border-radius: 0.5em;
+  background: none;
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  &:focus {
+    outline:0;
+  }
+  &:active {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+footer {
+  margin: 0;
+  font-size: 0.8em;
+}
+.controls {
+  text-align: center;
+}
+
+a.control {
+  text-shadow: 2px 2px 3px 2px rgba(0,0,0,0.4);
+  font-size:1.8em;
+  color: #000;
+  width:100%;
+  i {
+    font-size: 3em;
+    font-size: 20vw; // fix this for desktop using media query
+  }
+  &:hover {
+    color: #444;
+  }
+  &:active {
+    color: #5f2;
+  }
+}
+
+// import styles for revealjs test
+@import '/css/reveal/reveal.min.css';
+@import '/css/reveal/theme/default.css';
+
+.slides section {
+  background:none;
+}
+.reveal {
+  background: rgba(0,0,0,0.4);
+}

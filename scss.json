@@ -1,0 +1,7 @@
+{
+ "enableAutoprefixer": true,
+  "includePaths": [
+    "client/scss/"
+  ],
+  "outFile": "client/app.css"
+}

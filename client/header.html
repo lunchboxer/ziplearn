@@ -1,0 +1,54 @@
+<template name="header">
+
+<header class="nav">
+
+    <nav class="nav-collapse">
+      <ul>
+        <li><a href="/" id="home"><i class="fa fa-home fa-fw"></i>Home</a>
+        </li>
+        <li><a href="/about" id="about"><i class="fa fa-info fa-fw"></i>About</a>
+        </li>
+        {{#if currentUser}}
+          <li><a href="/settings" id="settings"><i class="fa fa-cog fa-fw"></i>Settings</a>
+          </li>
+          <li><a href="#" id="logout"><i class="fa fa-sign-out fa-fw"></i>Log out</a>
+          </li>
+        {{else}}
+          <li><a href="/login" id="login"><i class="fa fa-sign-in fa-fw"></i>Sign in</a>
+          </li>
+
+        {{/if}}
+      </ul>
+    </nav>
+
+    <h1 class="title">ZipLearn</h1>
+
+  </header>
+
+  <script>
+    var navigation = responsiveNav(".nav-collapse", {
+      animate: true,
+      transition: 284,
+      label: "Menu",
+      insert: "after",
+      customToggle: "",
+      closeOnNavClick: true,
+      openPos: "relative",
+      navClass: "nav-collapse",
+      navActiveClass: "js-nav-active",
+      jsClass: "js",
+      init: function() {},
+      open: function() {},
+      close: function() {}
+    });
+  </script>
+  {{#if currentUser}}
+    <script>
+      navigation.resize()
+    </script>
+  {{/if}}
+
+</template>
+
+<template name="usermenuitems">
+</template>

@@ -1,0 +1,53 @@
+<template name="register">
+
+  <section id="register">
+
+    <h2>Create an account</h2>
+
+    <p>
+      To use ZipLearn you need an account. If you don't have one already, use the form below to create a new one.
+    </p>
+
+    <form id="register-form" action="action">
+
+      <div class="row">
+        <div class="small-12 large-4 columns">
+
+          <!-- email row -->
+          <div class="row">
+            <div class="small-3 columns">
+              <label for="account-email" class="right inline">Email:</label>
+            </div>
+            <div class="small-9 columns">
+              <input type="email" id="account-email" placeholder="email@domain.com">
+            </div>
+          </div>
+
+          <!-- password row -->
+          <div class="row">
+            <div class="small-3 columns">
+              <label for="account-password" class="right inline">Password:</label>
+            </div>
+            <div class="small-9 columns">
+              <input type="password" id="account-password" placeholder="password">
+            </div>
+          </div>
+
+          <!-- button row -->
+          <div class="row">
+            <div class="small-12 columns right-align">
+              <input type="submit" id="create-account" value="Create an Account" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </form>
+    <p>
+      <a href="/">Nevermind, I don't want to create an account.</a>
+    </p>
+
+  </section>
+
+</template>
