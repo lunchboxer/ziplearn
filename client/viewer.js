@@ -17,7 +17,7 @@ controlStream.on('pause', function () {
 })
 
 Template.viewer.helpers({
-  'theme' : 'solarized'
+  'theme' : 'serif'
 })
 
 Template.viewer.rendered = function() {

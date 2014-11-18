@@ -2,5 +2,5 @@
 *.swo
 
 .sass-cache
-/notes.*
+*notes.*
 *.log
