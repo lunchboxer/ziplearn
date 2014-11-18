@@ -1,7 +1,6 @@
 {
   "name": "ZipLearn",
   "description": "Classroom tools right on your phone",
-  "version": "0.0.1",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait"
