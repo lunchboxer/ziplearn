@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "auto-reload-brunch": "~1.7.0",
+    "brunch-pleeease": "^1.0.0",
     "clean-css-brunch": "~1.7.0",
     "coffee-script-brunch": "^1.8.1",
     "css-brunch": "~1.7.0",

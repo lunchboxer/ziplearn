@@ -1,21 +1,32 @@
-exports.config = 
-  plugins: 
-    sass: 
+exports.config =
+  plugins:
+    sass:
       mode: 'ruby',
       allowCache: true
-    autoReload: 
-      enabled: 
+    autoReload:
+      enabled:
         css: 'on',
         js: 'on',
         assets: 'on'
-  paths: 
+    pleeease:
+      autoprefixer: true
+      filters: true
+      rem: true
+      pseudoElements: true
+      opacity: true
+      jimport: true
+      mqpacker: true
+      minifier: true
+      next: false
+      sourcemaps: false
+  paths:
     watched: ['app', 'vendor', 'test']
-  files: 
-    javascripts: 
-      joinTo: 
+  files:
+    javascripts:
+      joinTo:
         'javascripts/app.js': /^app/,
         'javascripts/vendor.js': /^(vendor\/scripts\/(common|development)|vendor\\scripts\\(common|development))/
-      order: 
+      order:
         before: [
           'vendor/scripts/common/fastclick.js',
           'vendor/scripts/development/jquery.js',
@@ -23,16 +34,16 @@ exports.config =
           'vendor/scripts/development/ember.js',
           'vendor/scripts/development/ember-data.js'
         ]
-    stylesheets: 
+    stylesheets:
       defaultExtension: 'scss',
-      joinTo: 
+      joinTo:
         'stylesheets/app.css': /^(app\/styles)/
-    templates: 
+    templates:
       precompile: true,
       root: 'templates',
-      joinTo: 
+      joinTo:
         'javascripts/app.js': /^app/
-        
+
   overrides:
     # Production Settings
     production:
