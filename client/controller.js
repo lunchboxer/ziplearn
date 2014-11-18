@@ -1,5 +1,3 @@
-controlStream = new Meteor.Stream('chat')
-
 Template.controller.events({
   'click .prev' : function () {
     controlStream.emit('prev')
@@ -9,9 +7,6 @@ Template.controller.events({
   },
   'click .restart' : function () {
     controlStream.emit('restart')
-  },
-  'click .last' : function () {
-    controlStream.emit('last')
   },
   'click .pause' : function () {
     controlStream.emit('pause')

@@ -1,21 +1,23 @@
 <template name="home">
 
-  {{#if currentUser }}
+  <section id="home">
+    <h2>ZipLearn tools</h2>
 
-    <section id="home">
+    {{#if currentUser }}
 
-      <h2>ZipLearn tools</h2>
       <p>
       <a href="viewer">Presentation viewer</a>
       <a href="controller">Controller</a>
       </p>
 
-    </section>
 
   {{else}}
 
-    {{>login}}
+      <p>
+      You must sign in to use the Ziplearn tools.
+      </p>
 
   {{/if}}
+  </section>
 
 </template>

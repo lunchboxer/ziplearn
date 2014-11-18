@@ -16,11 +16,15 @@ controlStream.on('pause', function () {
   Reveal.togglePause()
 })
 
+Template.viewer.helpers({
+  'theme' : 'solarized'
+})
+
 Template.viewer.rendered = function() {
   // $.getScript('/js/head.min.js')
   $.getScript('/js/reveal.min.js', function () {
     Reveal.initialize({
-      transition: 'linear',
+      transition: 'zoom',
       backgroundTransition: 'none',
       controls: false
     })
