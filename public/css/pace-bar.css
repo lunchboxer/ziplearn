@@ -1,0 +1,42 @@
+.pace {
+  box-sizing: border-box;
+  background-clip: padding-box;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
+  z-index: 2000;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  width: 250px;
+  height: 17px;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.pace .pace-progress {
+  box-sizing: border-box;
+  background-clip: padding-box;
+  -webkit-transition: width 1s ease-in-out 1s linear;
+          transition: width 1s ease-in-out 1s linear;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+
+  max-width: 237px;
+  position: fixed;
+  z-index: 2000;
+  display: block;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  height: 5px;
+  background: rgba(255,255,255,0.4);
+}
+
+.pace.pace-inactive {
+  display: none;
+}

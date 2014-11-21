@@ -17,7 +17,7 @@ controlStream.on('pause', function () {
 })
 
 Template.viewer.helpers({
-  'theme' : 'serif'
+  'theme' : 'blood'
 })
 
 Template.viewer.rendered = function() {
