@@ -1,10 +1,17 @@
 template(name="home")
     section#home
-        h2 ZipLearn tools
         if currentUser
-            p
-                a(href="viewer") Presentation viewer
-                a(href="controller") Controller
+            h2 ZipLearn tools
+            ul
+                li
+                    a(href="settings") Settings
+                li
+                    a(href="viewer") Presentation viewer
+                li
+                    a(href="controller") Controller
 
         else
-            p You must sign in to use the Ziplearn tools.
+            h2
+                i.fa.fa-exclamation-circle
+                | Login required
+            p You must sign in to use the Ziplearn tools. Use dropdown from the menu above.

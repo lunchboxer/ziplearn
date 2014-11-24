@@ -87,22 +87,21 @@ a {
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   color: black;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.5);
 }
 .dropdown-menu {
   box-shadow: none;
   border: none;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.5);
   border-radius: 0;
 }
 
-
 .navbar-default .navbar-toggle {
-    &:hover {
-      color: darken($font-color, 20);
-    }
-    &:hover, &:focus, &:active {
-      background: none;
+  &:hover {
+    color: darken($font-color, 20);
+  }
+  &:hover, &:focus, &:active {
+    background: none;
   }
 }
 
@@ -127,4 +126,11 @@ section {
 
 footer {
   padding: 1em;
+}
+.modal {
+  color: #333;
+  .btn {
+    background:$bg-color;
+    border:black;
+  }
 }
