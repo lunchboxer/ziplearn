@@ -15,6 +15,9 @@ template(name="header")
                     a(href="/") Home
                 li
                     a(href="about") About
+                if isInRole 'admin'
+                    li
+                        a(href="admin") Admin
 
             ul.nav.navbar-nav.navbar-right
                 +loginButtons

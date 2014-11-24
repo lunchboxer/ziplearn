@@ -7,8 +7,9 @@ template(name="home")
                     a(href="settings") Settings
                 li
                     a(href="viewer") Presentation viewer
-                li
-                    a(href="controller") Controller
+                if isInRole 'controller'
+                    li
+                        a(href="controller") Controller
 
         else
             h2
