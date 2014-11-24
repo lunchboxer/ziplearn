@@ -21,6 +21,9 @@ body {
 
 a {
   color: $link-color;
+  &:hover {
+    color: lighten($link-color, 40)
+  }
 }
 
 // might add another one between 750 and 1100 for the ipads
