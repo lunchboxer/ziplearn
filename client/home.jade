@@ -1,0 +1,10 @@
+template(name="home")
+    section#home
+        h2 ZipLearn tools
+        if currentUser
+            p
+                a(href="viewer") Presentation viewer
+                a(href="controller") Controller
+
+        else
+            p You must sign in to use the Ziplearn tools.

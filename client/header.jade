@@ -1,0 +1,19 @@
+template(name="header")
+
+    .navbar.navbar-default(role="navigation")
+        .navbar-header
+            a.navbar-brand(href="/") ZipLearn
+            button.navbar-toggle.collapsed(data-toggle="collapse", data-target=".navbar-collapse")
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+
+        .navbar-collapse.collapse
+            ul.nav.navbar-nav
+                li
+                    a(href="/") Home
+                li
+                    a(href="about") About
+            ul.nav.navbar-nav.navbar-right
+                +loginButtons
