@@ -21,5 +21,6 @@ Meteor.startup(function() {
   adminUser = Meteor.users.findOne({
     username: 'james'
   })
-  Roles.addUsersToRoles(adminUser, ['admin', 'controller']);
+  if (adminUser)
+    Roles.addUsersToRoles(adminUser, ['admin', 'controller']);
 })

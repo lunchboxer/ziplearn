@@ -8,9 +8,13 @@ template(name="controller")
             a.control.restart(href="#") restart
             br
 
-            a.control.prev(href="#")
-                i.fa.fa-chevron-left.fa-fw
-            a.control.pause(href="#")
-                i.fa.fa-pause.fa-fw
-            a.control.next(href="#")
-                i.fa.fa-chevron-right.fa-fw
+            .row
+                .col-xs-4.col-md-2
+                    a.control.prev(href="#")
+                        i.fa.fa-chevron-left.fa-fw
+                .col-xs-4.col-md-2
+                    a.control.pause(href="#")
+                        i.fa.fa-pause.fa-fw
+                .col-xs-4.col-md-2
+                    a.control.next(href="#")
+                        i.fa.fa-chevron-right.fa-fw
