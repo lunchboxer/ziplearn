@@ -1,0 +1,9 @@
+template(name="slideshow")
+    head
+        title {{slideshow.title}}
+        link(rel="stylesheet", href="/css/reveal/reveal.min.css")
+        link(rel="stylesheet", href="/css/reveal/theme/#{theme}.css")
+
+    .reveal
+        .slides
+            | {{{slideshow.slides}}}

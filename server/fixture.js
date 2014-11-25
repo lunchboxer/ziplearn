@@ -1,5 +1,6 @@
-// create a test user on reset
+// populate database with initial values
 Meteor.startup(function() {
+  // create a default user
   if (Meteor.users.find().count() === 0) {
     Accounts.createUser({
       username: 'james',
@@ -12,6 +13,7 @@ Meteor.startup(function() {
     });
   }
 
+  // create roles
   if (!Meteor.roles.findOne({name: "controller"}))
     Roles.createRole("controller");
 
@@ -21,6 +23,17 @@ Meteor.startup(function() {
   adminUser = Meteor.users.findOne({
     username: 'james'
   })
+  // assign them to the default user
   if (adminUser)
     Roles.addUsersToRoles(adminUser, ['admin', 'controller']);
+
+  if (Slideshows.find().count() === 0) {
+    Slideshows.insert({
+      title: 'Introducing Ziplearn',
+      slides: '<section><h1>ZipLearn</h1><h3>Example slideshow</h3></section>' +
+              '<section><h2>This is a slide</h2></section>' +
+              '<section><h2>This is another slide</h2></section>' +
+              '<section><h1>THE END</h1></section>'
+    })
+  }
 })

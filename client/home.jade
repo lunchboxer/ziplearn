@@ -4,12 +4,12 @@ template(name="home")
             h2 ZipLearn tools
             ul
                 li
-                    a(href="settings") Settings
+                    a(href="/settings") Settings
                 li
-                    a(href="viewer") Presentation viewer
+                    a(href="/shows") Slideshows
                 if isInRole 'controller'
                     li
-                        a(href="controller") Controller
+                        a(href="/controller") Controller
 
         else
             h2

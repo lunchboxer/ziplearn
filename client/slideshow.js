@@ -16,12 +16,14 @@ controlStream.on('pause', function () {
   Reveal.togglePause()
 })
 
-Template.viewer.helpers({
-  'theme' : 'blood'
+Template.slideshow.helpers({
+  'theme' : 'blood',
+  'slideshow' : function () {
+    return Slideshows.findOne()
+  }
 })
 
-Template.viewer.rendered = function() {
-  // $.getScript('/js/head.min.js')
+Template.slideshow.rendered = function() {
   $.getScript('/js/reveal.min.js', function () {
     Reveal.initialize({
       transition: 'zoom',

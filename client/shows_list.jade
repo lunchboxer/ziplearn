@@ -1,0 +1,8 @@
+template(name="showsList")
+    section#shows-list
+
+        h2 Available presentations
+        ul
+            each slideshows
+                li
+                    a(href="/show/{{_id}}") {{title}}
